@@ -2,10 +2,6 @@ package arraylinierlist;
 public class ArrayLinierList1 extends ArrayLinierList{
     @Override
     public void add(int index, Object theElement){   
-        if(index < 0 || index > size)
-            throw new IndexOutOfBoundsException("index = " + index + " size = " + size);
-        if(size == element.length)
-            element = ChangeLength.changeLength1d(element,2 * size);
         for(int i = size - 1; i >= index; i--)
             element[i + 1] = element[i];
         element[index] = theElement;
